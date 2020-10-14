@@ -15,7 +15,7 @@ const NORMALISATION = 1;    // normalises the randomisation to make the waves mo
 
 const PRECISION = 100;      // trades performance for smoothness
 const MAGNITUDE = 15;       // magnitude of the sine waves
-const PERIOD = 200;         // period of the sine waves
+const PERIOD = 50;         // period of the sine waves
 
 // init
 
