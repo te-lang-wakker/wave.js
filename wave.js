@@ -9,6 +9,7 @@
 const XSTART = 0;
 const YSTART = window.innerHeight / 2;
 
+const COLOUR = "#74b9ff";
 const SPEED = 0.005;        // speed at which the waves move
 const VARIATION = 15;       // number of sine waves to glue
 const NORMALISATION = 1;    // normalises the randomisation to make the waves more consistent
@@ -78,7 +79,7 @@ function draw() {
 
     context.lineTo(x, y + canvas.height - y);
     context.closePath();
-    context.fillStyle = "#D63C28";
+    context.fillStyle = COLOUR;
     context.fill();
 
     offset += SPEED;
