@@ -14,8 +14,8 @@ const VARIATION = 15;       // number of sine waves to glue
 const NORMALISATION = 1;    // normalises the randomisation to make the waves more consistent
 
 const PRECISION = 100;      // trades performance for smoothness
-const MAGNITUDE = 15;       // magnitude of the sine waves
-const PERIOD = 50;         // period of the sine waves
+const MAGNITUDE = 50;       // magnitude of the sine waves
+const PERIOD = 100;         // period of the sine waves
 
 // init
 
