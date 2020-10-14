@@ -8,12 +8,14 @@
 
 const XSTART = 0;
 const YSTART = window.innerHeight / 2;
-const STEP_SIZE = 0.01;
-const MAGNITUDE = 15;
-const PERIOD = 200;
-const SPEED = 0.005;
-const VARIATION = 15;
-const NORMALISATION = 1;
+
+const SPEED = 0.005;        // speed at which the waves move
+const VARIATION = 15;       // number of sine waves to glue
+const NORMALISATION = 1;    // normalises the randomisation to make the waves more consistent
+
+const PRECISION = 100;      // trades performance for smoothness
+const MAGNITUDE = 15;       // magnitude of the sine waves
+const PERIOD = 200;         // period of the sine waves
 
 // init
 
@@ -68,7 +70,7 @@ function draw() {
     context.lineTo(XSTART, YSTART + canvas.height - YSTART);
 
     let x = 0, y;
-    for (let i = 0; x < canvas.width; i += STEP_SIZE) {
+    for (let i = 0; x < canvas.width; i += (1 / PRECISION)) {
         x = XSTART + i * PERIOD;
         y = YSTART + cumulativeSin(i, offset) * MAGNITUDE;
         context.lineTo(x, y);
